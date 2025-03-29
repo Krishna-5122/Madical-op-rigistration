@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appointmentApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | Fix My Appointment</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="icon" href="logo.png" type="images/png">
+</head>
+<body ng-controller="MainController">
+    <!-- Header (same as index.html) -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img class="logo" src="logo.png" alt="Fix My Appointment Logo">
+                <div class="logo-text">Fix My <span>Appointment</span></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="register.html">User Registration</a></li>
+                    <li><a href="#">Book Appointment</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Appointment Page Content -->
+    <main>
+        <section id="appointment">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-section">
+                        <h2 class="form-title">Book Your Appointment</h2>
+                        <div class="success-message" ng-show="appointmentSuccess">
+                            Your appointment has been booked successfully! A confirmation has been sent to your email.
+                        </div>
+                        <form name="appointmentForm" ng-submit="submitAppointment()" novalidate>
+                            <!-- Copy appointment form from original code -->
+                                <div class="form-group">
+                                    <label for="hospital">Hospital Name</label>
+                                    <select id="hospital" class="form-control" ng-model="appointment.hospital" required>
+                                        <option value="">Select Hospital</option>
+                                        <option value="City General Hospital">City General Hospital</option>
+                                        <option value="Metropolitan Medical Center">Metropolitan Medical Center</option>
+                                        <option value="Sunshine Children's Hospital">Sunshine Children's Hospital</option>
+                                        <option value="Green Valley Clinic">Green Valley Clinic</option>
+                                        <option value="University Teaching Hospital">University Teaching Hospital</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="specialization">Doctor Specialization</label>
+                                    <select id="specialization" class="form-control" ng-model="appointment.specialization" required>
+                                        <option value="">Select Specialization</option>
+                                        <option value="Cardiology">Cardiology</option>
+                                        <option value="Dermatology">Dermatology</option>
+                                        <option value="Pediatrics">Pediatrics</option>
+                                        <option value="Orthopedics">Orthopedics</option>
+                                        <option value="Neurology">Neurology</option>
+                                        <option value="General Physician">General Physician</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="date">Preferred Date</label>
+                                    <input type="date" id="date" class="form-control" ng-model="appointment.date" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="time">Preferred Time</label>
+                                    <input type="time" id="time" class="form-control" ng-model="appointment.time" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="patientName">Patient Full Name</label>
+                                    <input type="text" id="patientName" class="form-control" placeholder="Enter Patient Full Name" ng-model="appointment.patientName" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="patientAge">Patient Age</label>
+                                    <input type="number" id="patientAge" class="form-control" placeholder="Enter Patient Age" ng-model="appointment.patientAge" min="0" max="120" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="patientContact">Contact Number</label>
+                                    <input type="tel" id="patientContact" class="form-control" placeholder="Enter your contact number" ng-model="appointment.patientContact" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="patientEmail">Email Address</label>
+                                    <input type="email" id="patientEmail" class="form-control" placeholder="Enter your email address" ng-model="appointment.patientEmail" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="patientNotes">Additional Notes (Optional)</label>
+                                    <textarea id="patientNotes" class="form-control"  ng-model="appointment.patientNotes" rows="3"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn" ng-disabled="appointmentForm.$invalid">Book Appointment</button>
+                        </form>
+                    </div>
+                    
+                    <div class="quote-section">
+                        <div class="quote-container">
+                            <p class="quote-text">{{currentQuote.text}}</p>
+                            <p class="quote-author">— {{currentQuote.author}}</p>
+                        </div>
+                        <p style="margin-top: 30px; text-align: center;">Your health is our priority. Book with confidence knowing you're in good hands.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Fix My Appointment</h3>
+                    <p>Making healthcare accessible and convenient for everyone through technology.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Book Appointment</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fix My Appointment. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

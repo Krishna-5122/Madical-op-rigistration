@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appointmentApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fix My Appointment - Book Doctor Appointments Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Favicon for browser tab -->
+    <link rel="icon" href="logo.png" type="images/png">
+</head>
+<body ng-controller="MainController">
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img class="logo" src="logo.png" alt="Fix My Appointment Logo">
+                <div class="logo-text">Fix My <span>Appointment</span></div>
+               
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="register.html">User Registration</a></li>
+                    <li><a href="appointment.html">Book Appointment</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Page Content -->
+    <main>
+        <section id="home">
+            <div class="hero">
+                <div class="hero-content container fade-in">
+                    <h1>Your Health Matters</h1>
+                    <p>Book appointments with top doctors and hospitals with just a few clicks. Quality healthcare made accessible.</p>
+                    <a href="appointment.html" class="btn btn-large">Book Appointment Now</a>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="quote-container fade-in delay-1">
+                    <p class="quote-text">{{currentQuote.text}}</p>
+                    <p class="quote-author">— {{currentQuote.author}}</p>
+                </div>
+                
+                <div class="appointment-cards">
+                    <div class="appointment-card fade-in delay-2">
+                        <h3>Easy Booking</h3>
+                        <p>Select from our network of hospitals and specialists to find the perfect healthcare provider for your needs.</p>
+                    </div>
+                    <div class="appointment-card fade-in delay-2">
+                        <h3>Verified Doctors</h3>
+                        <p>All our doctors are thoroughly vetted and certified to ensure you receive the highest quality care.</p>
+                    </div>
+                    <div class="appointment-card fade-in delay-2">
+                        <h3>Instant Confirmation</h3>
+                        <p>Receive immediate confirmation of your appointment via email and SMS with all the details you need.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Fix My Appointment</h3>
+                    <p>Making healthcare accessible and convenient for everyone through technology.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="appointment.html">Book Appointment</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fix My Appointment. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

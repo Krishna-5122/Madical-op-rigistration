@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="appointmentApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Fix My Appointment</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="/js/app.js"></script>
+    <link rel="icon" href="logo.png" type="images/png">
+</head>
+<body ng-controller="MainController">
+    <!-- Header (same as index.html) -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img class="logo" src="logo.png" alt="Fix My Appointment Logo">
+                <div class="logo-text">Fix My <span>Appointment</span></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="register.html">User Registration</a></li>
+                    <li><a href="appointment.html">Book Appointment</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Page Content -->
+    <main>
+        <section id="about">
+            <div class="container" style="padding: 60px 20px;">
+                <h2 style="font-size: 36px; margin-bottom: 30px; text-align: center; color: var(--vibrant-aqua);">About Fix My Appointment</h2>
+                
+                <div style="background-color: var(--deep-cyan); padding: 30px; border-radius: 8px; margin-bottom: 40px;">
+                    <h3 style="font-size: 24px; margin-bottom: 20px; color: var(--light-cyan);">Our Mission</h3>
+                    <p style="font-size: 18px; line-height: 1.7;">
+                        At Fix My Appointment, we believe that quality healthcare should be accessible to everyone. 
+                        Our mission is to simplify the process of booking medical appointments, saving you time and 
+                        reducing the stress often associated with healthcare management.
+                    </p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+                    <div style="background-color: var(--white); color: var(--dark-teal); padding: 25px; border-radius: 8px;">
+                        <h3 style="color: var(--deep-cyan); margin-bottom: 15px; font-size: 20px;">Who We Are</h3>
+                        <p>
+                            We are a team of healthcare professionals and technology experts who saw an opportunity 
+                            to improve the patient experience through digital innovation. Our platform connects 
+                            patients with top-rated healthcare providers across the country.
+                        </p>
+                    </div>
+                    
+                    <div style="background-color: var(--white); color: var(--dark-teal); padding: 25px; border-radius: 8px;">
+                        <h3 style="color: var(--deep-cyan); margin-bottom: 15px; font-size: 20px;">What We Do</h3>
+                        <p>
+                            We provide a seamless online platform for booking medical appointments with verified 
+                            doctors and hospitals. Our system handles scheduling, reminders, and follow-ups to 
+                            ensure you never miss an important healthcare appointment.
+                        </p>
+                    </div>
+                    
+                    <div style="background-color: var(--white); color: var(--dark-teal); padding: 25px; border-radius: 8px;">
+                        <h3 style="color: var(--deep-cyan); margin-bottom: 15px; font-size: 20px;">Why Choose Us</h3>
+                        <p>
+                            With thousands of satisfied patients and partnerships with leading healthcare providers, 
+                            we offer reliability, convenience, and peace of mind. Our user-friendly platform makes 
+                            healthcare management simple and stress-free.
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="appointment.html" class="btn" ng-click="changePage('appointment')">Book Your First Appointment</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Fix My Appointment</h3>
+                    <p>Making healthcare accessible and convenient for everyone through technology.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="appointment.html">Book Appointment</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Connect With Us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fix My Appointment. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
